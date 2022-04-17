@@ -1,0 +1,37 @@
+
+.my-name{
+    transform: translateY(-50%);
+    color: #ddd;
+    letter-spacing: 0.2em;
+}
+.my-name span{
+    display: inline-block;
+    animation: animate 1s linear forwards;
+}
+@keyframes animate {
+    0%{
+       opacity: 0; 
+       transform: rotateY(90deg);
+       filter: blur(10px);
+    }
+    100%{
+        opacity: 1; 
+        transform: rotateY(0deg);
+        filter: blur(0);
+     }
+}
+.animated-letter-section::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: red;
+    mix-blend-mode: color;
+    pointer-events: none;
+
+}
+video{
+   object-fit: cover; 
+}
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;}
